@@ -30,7 +30,7 @@ a{
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: space-between;
+    /*align-items: space-between;*/
     flex-wrap:wrap;
 }
 .header{
@@ -63,8 +63,8 @@ a{
 }
 .account{
     width: 60%;
-    height: 40px;
-    outline: none;
+    height: 60px;
+    /*outline: none;*/
     border-radius: 5px;
     transform: translate(30%);
     padding-left:10px;
@@ -74,7 +74,7 @@ a{
 }
 .pwd{
     width: 60%;
-    height: 40px;
+    height: 60px;
     outline: none;
     border-radius: 5px;
     transform: translate(30%);
@@ -83,11 +83,13 @@ a{
 }
 .iconfont{
     position:relative;
+    top:2px;
     /* left:100px; */
+    font-size: 20px;
 }
 .account_inp{
     width: 250px;
-    height: 40px;
+    height: 60px;
     outline: none;
     border-radius: 5px;
     /* transform: translate(25%); */
@@ -95,7 +97,7 @@ a{
 }
 .pwd_inp{
     width: 250px;
-    height: 40px;
+    height: 60px;
     outline: none;
     border-radius:5px;
     margin:0 auto;
@@ -114,11 +116,11 @@ a{
 }
 .login_btn{
     border:none;
-    background-color: none;
+    /*background-color: none;*/
     width: 250px;
     height: 50px;
     font-size: 20px;
-    color:white;
+    color: white;
     background-color: rgba(78, 158, 208, 0.8);
     border-radius: 10px;
 }
