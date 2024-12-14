@@ -1,11 +1,11 @@
 
     // 路由配置
     const routes = {
-    '/music-home': '<iframe src="../html/index/musicHome.html" width="100%" height="500px" frameborder="0"></iframe>',
-    '/my-music': '<iframe src="../html/index/myMusic.html" width="100%" height="500px" frameborder="0"></iframe>',
-    '/client': '<iframe src="../html/index/client.html" width="100%" height="500px" frameborder="0"></iframe>',
-    '/open' : '<iframe src="../html/index/open.html" width="100%" height="500px" frameborder="0"></iframe>',
-    '/vip' : '<iframe src="../html/index/vip.html" width="100%" height="500px" frameborder="0"></iframe>',
+    '/music-home': '<iframe src="../html/index/musicHome.html" width="100%" height="1000px" frameborder="0"></iframe>',
+    '/my-music': '<iframe src="../html/index/myMusic.html" width="100%"  frameborder="0"></iframe>',
+    '/client': '<iframe src="../html/index/client.html" width="100%"  frameborder="0"></iframe>',
+    '/open' : '<iframe src="../html/index/open.html" width="100%"  frameborder="0"></iframe>',
+    '/vip' : '<iframe src="../html/index/vip.html" width="100%" frameborder="0"></iframe>',
     '404': '<h2>404</h2><p>页面未找到！</p>',
 };
 
@@ -28,6 +28,25 @@
     window.addEventListener('hashchange', render);  // 监听 URL 变化
     window.addEventListener('load', render);  // 页面加载时触发渲染
 
+    // const navLink = document.querySelectorAll(".navLink");
+    // const app = document.querySelector(".app");
+    // navLink.forEach(link => {
+    //     link.addEventListener('click', function(event) {
+    //         event.preventDefault(); // 阻止默认跳转
+    //         const url = link.getAttribute('href'); // 获取链接的 href
+    //         app.src = url; // 设置 iframe 的 src
+    //         navLink.forEach(l => l.classList.remove('active'));
+    //         // 给当前链接添加选中样式
+    //         link.classList.add('active');
+    //     });
+    // });
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const firstLink = navLink[0];
+    //     if (firstLink) {
+    //         app.src = firstLink.getAttribute('href');
+    //         firstLink.classList.add('active'); // 给第一个链接添加选中样式
+    //     }
+    // });
 
     //搜索
     const searInp = document.querySelector('.search_inp')

@@ -194,6 +194,7 @@ a:hover{
     width: 80px;
     height: 80px;
     border:1px solid rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 .moneyBox .mItem{
     height: 40px;
