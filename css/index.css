@@ -123,11 +123,15 @@ a:hover{
     justify-content: space-between;
 
 }
+/*头像*/
 .person .pic{
     width:40px;
     height:40px;
     border-radius: 25px;
     overflow: hidden;
+}
+.person .pic:hover{
+    box-shadow: 0 0 10px gray;
 }
 .person .pic img{
     width:40px;
@@ -135,6 +139,7 @@ a:hover{
     background-size: cover;
     background-repeat: no-repeat;
 }
+/*开通VIP*/
 .person .vip{
     width:130px;
     height:40px;
@@ -168,6 +173,7 @@ a:hover{
 .vipBox .item1{
     border-bottom: 1px solid gray;
 }
+/*充值*/
 .person .money{
     box-sizing: border-box;
     width:80px;

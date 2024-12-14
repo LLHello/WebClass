@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hash-Based Routing</title>
     <link rel="stylesheet" href="../css/index.css">
+
 </head>
+<script src="../js/index.js"></script>
 <body>
     <div class="nav_box">
 <!--        logo-->
@@ -14,11 +16,11 @@
         </div>
 <!--        导航栏-->
         <nav>
-            <a href="#/music_home" class="item">音乐馆</a>
-            <a href="#/my_music" class="item">我的音乐</a>
-            <a href="#/client" class="item">客户端</a>
-            <a href="#/my_music" class="item">开放平台</a>
-            <a href="#/my_music" class="item">VIP</a>
+            <a href="#/music-home" class="item nav-link" >音乐馆</a>
+            <a href="#/my-music" class="item nav-link" >我的音乐</a>
+            <a href="#/client" class="item nav-link" >客户端</a>
+            <a href="#/open" class="item nav-link" >开放平台</a>
+            <a href="#/vip" class="item nav-link" >VIP</a>
         </nav>
 <!--        搜索-->
         <div class="search">
@@ -57,103 +59,12 @@
         </div>
     </div>
 
-    <!-- 二级路由 -->
-    <div id="music_home-links" style="display: none;">
-        <a href="#/music_home/section1">Section 1</a>
-        <a href="#/music_home/section2">Section 2</a>
-    </div>
-
-    <div id="my_music-links" style="display: none;">
-        <a href="#/my_music/team">Team</a>
-        <a href="#/my_music/contact">Contact</a>
-    </div>
-    <div class="client-links">
-        <a href="#/client/team">Team</a>
-        <a href="#/client/contact">Contact</a>
-    </div>
 
     <!-- 路由内容显示区 -->
     <div id="app"></div>
 
-<script>
-    //搜索
-    const searInp = document.querySelector('.search_inp')
-    const hisList = document.querySelector('.historyList')
-    //导航栏
-    const navItems = document.querySelectorAll('.item');
-    //用户开通VIP
-    const vip = document.querySelector('.vip')
-    const vipBox = document.querySelector('.vipBox')
-
-    //用户充值
-    const money = document.querySelector('.money')
-    const moneyBox = document.querySelector('.moneyBox')
-
-    //用户充值，鼠标悬浮与离开
-    money.addEventListener('mousemove',()=>{
-        moneyBox.style.display = 'block'
-    })
-    moneyBox.addEventListener('mouseleave',()=>{
-        moneyBox.style.display= 'none';
-    })
-    //搜索聚焦与失去焦点
-    searInp.addEventListener('focus',()=>{
-        hisList.style.display='block';
-    })
-    searInp.addEventListener('blur',()=>{
-        hisList.style.display='none';
-    })
-    //开通VIP，鼠标悬浮与离开
-    vip.addEventListener('mousemove',()=>{
-        vipBox.style.display = 'block';
-    })
-
-    vipBox.addEventListener('mouseleave',()=>{
-        vipBox.style.display = 'none';
-    })
-
-    // 为每个链接添加点击事件
-    navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            // 移除所有链接的 active 类
-            navItems.forEach(i => i.classList.remove('active'));
-
-            // 为当前点击的链接添加 active 类
-            item.classList.add('active');
-        });
-    });
-    const routes = {
-        '/music_home': '<h2>Welcome to Home</h2>',
-        '/music_home/section1': '<h2>Home - Section 1</h2>',
-        '/music_home/section2': '<h2>Home - Section 2</h2>',
-        '/my_music': '<h2>My Music</h2>',
-        '/my_music/team': '<h2>Music - Team</h2>',
-        '/my_music/contact': '<h2>Music - Contact</h2>',
-        'client':'<h2>Client</h2>',
-        '/client/team': '<h2>Client - Team</h2>',
-        '/client/contact': '<h2>Client - Contact</h2>',
-    };
-
-    function render() {
-        const hash = window.location.hash.slice(1); // 去掉开头的 #
-        const app = document.getElementById('app');
-        const homeLinks = document.getElementById('music_home-links');
-        const aboutLinks = document.getElementById('my_music-links');
-        const clientLinks = document.getElementById('client-links')
-
-        // 显示或隐藏导航
-        homeLinks.style.display = hash.startsWith('/music_home') ? 'block' : 'none';
-        aboutLinks.style.display = hash.startsWith('/my_music') ? 'block' : 'none';
-        clientLinks.style.display = hash.startsWith('/client_links') ? 'block' : 'none';
-
-
-        // 根据路由渲染内容
-        app.innerHTML = routes[hash] || '<h2>404 - Page Not Found</h2>';
-    }
-
-    // 初始化渲染
-    window.addEventListener('hashchange', render);
-    window.addEventListener('load', render);
-</script>
 </body>
+<script>
+
+</script>
 </html>
