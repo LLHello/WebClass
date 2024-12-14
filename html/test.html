@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash-Based Routing</title>
+</head>
+<body>
+<!-- 一级路由 -->
+<nav>
+    <a href="#/home">Home</a>
+    <a href="#/about">About</a>
+</nav>
+
+<!-- 二级路由 -->
+<div id="home-links" style="display: none;">
+    <a href="#/home/section1">Section 1</a>
+    <a href="#/home/section2">Section 2</a>
+</div>
+
+<div id="about-links" style="display: none;">
+    <a href="#/about/team">Team</a>
+    <a href="#/about/contact">Contact</a>
+</div>
+
+<!-- 路由内容显示区 -->
+<div id="app"></div>
+
+<script>
+    const routes = {
+        '/home': '<h2>Welcome to Home</h2>',
+        '/home/section1': '<h2>Home - Section 1</h2>',
+        '/home/section2': '<h2>Home - Section 2</h2>',
+        '/about': '<h2>About Us</h2>',
+        '/about/team': '<h2>About - Team</h2>',
+        '/about/contact': '<h2>About - Contact</h2>',
+    };
+
+    function render() {
+        const hash = window.location.hash.slice(1); // 去掉开头的 #
+        const app = document.getElementById('app');
+        const homeLinks = document.getElementById('home-links');
+        const aboutLinks = document.getElementById('about-links');
+
+        // 显示或隐藏导航
+        homeLinks.style.display = hash.startsWith('/home') ? 'block' : 'none';
+        aboutLinks.style.display = hash.startsWith('/about') ? 'block' : 'none';
+
+        // 根据路由渲染内容
+        app.innerHTML = routes[hash] || '<h2>404 - Page Not Found</h2>';
+    }
+
+    // 初始化渲染
+    window.addEventListener('hashchange', render);
+    window.addEventListener('load', render);
+</script>
+</body>
+</html>
