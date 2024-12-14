@@ -68,13 +68,15 @@ a:hover{
 }
 /* 搜索 */
 .search{
-    /*position:relative;*/
+    position:relative;
     /*left:-40px;*/
     border:1px solid black;
     width:210px;
     border-radius: 5px;
     display: flex;
     align-items: center;
+    /*float: left;*/
+    /*position:absolute;*/
 }
 .search .search_inp{
     height:35px;
@@ -85,10 +87,10 @@ a:hover{
 }
 .historyList{
     display: none;
-    position:absolute;
-    top:72px;
-    right:417px;
-    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top:6vh;
+    /*right:29vw;*/
+    background-color: skyblue;
     width:210px;
     height: 300px;
     border:1px solid black;
@@ -144,16 +146,17 @@ a:hover{
     width:130px;
     height:40px;
     background-color: #70ac70;
-    color: white;
+    color: black;
+    font-size: 14px;
     border-radius:5px;
     text-align: center;
     line-height: 40px;
+    position: relative;
 }
 .vipBox{
     display: none;
     position:absolute;
-    top:72px;
-    right:207px;
+
     width:130px;
     height: 90px;
     background-color: white;
@@ -182,15 +185,14 @@ a:hover{
     height: 40px;
     line-height: 40px;
     border-radius: 5px;
+    position:relative;
+    font-size:14px;
 }
 .moneyBox{
     display: none;
     position: absolute;
     width: 80px;
     height: 80px;
-    /*background-color: #70ac70;*/
-    top:72px;
-    right:101px;
     border:1px solid rgba(0, 0, 0, 0.2);
 }
 .moneyBox .mItem{
