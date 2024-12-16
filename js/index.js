@@ -1,7 +1,7 @@
 
     // 路由配置
     const routes = {
-    '/music-home': '<iframe src="../html/index/musicHome.html" width="100%" height="3000px" frameborder="0"></iframe>',
+    '/music-home': '<iframe src="../html/index/musicHome.html" width="100%" height="4000px" frameborder="0"></iframe>',
     '/my-music': '<iframe src="../html/index/myMusic.html" width="100%"  frameborder="0"></iframe>',
     '/client': '<iframe src="../html/index/client.html" width="100%"  frameborder="0"></iframe>',
     '/open' : '<iframe src="../html/index/open.html" width="100%"  frameborder="0"></iframe>',
